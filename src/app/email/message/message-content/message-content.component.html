@@ -1,0 +1,86 @@
+
+
+<div class="container">
+  <strong> From</strong>
+  <input [name]="from"/>
+  <p> {{from}} </p>
+  
+  <strong>To</strong>
+  <p>
+    {{to}}
+  </p> 
+  <strong>Subject</strong>
+  <p>
+    {{subject}}
+  </p> 
+  <strong>Content</strong>
+  <p>
+    {{text}}
+  </p>
+  <a>
+
+  </a>
+</div>
+
+
+
+<ion-content>
+  <form [formGroup]="ionicForm!" (ngSubmit)="submitForm()" novalidate>
+    <ion-item lines="full">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input formControlName="name" type="text" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="email" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">DOB</ion-label>
+      <ion-datetime (ionChange)="getDate($event)" formControlName="dob" [value]="defaultDate"></ion-datetime>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Mobile</ion-label>
+      <ion-input formControlName="mobile" type="text" required></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Submit</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
+
+
+
+<!-- <form 
+[formGroup]="form" 
+(ngSubmit)="manage(form.value)">
+  <ion-list 
+    margin-bottom >
+    <ion-item 
+        margin-bottom 
+        no-lines>
+        <ion-label floating>Framework name:</ion-label>
+
+        <ion-input 
+          type="text"
+          maxlength="40"
+          formControlName="name"></ion-input>
+        <span>Please enter a framework name of no more than 40 characters</span>
+    </ion-item>
+  </ion-list>
+        <button 
+          ion-button 
+          block  
+          margin-top
+          color="primary" 
+          text-center 
+          [disabled]="!form.valid">Submit
+        </button>
+</form> -->
+    <!-- Only allow form to be submitted IF validation criteria for
+          input fields has been successfully passed -->
+        <!-- Assign our first FormControl of name to the input field -->
+
+
+

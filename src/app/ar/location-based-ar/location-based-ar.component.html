@@ -1,0 +1,30 @@
+
+
+ <!-- https://ar-js-org.github.io/AR.js-Docs/location-based/ -->
+
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Location based AR</ion-title>
+    <ion-title *ngIf="getUserCoords | async">
+      {{ (getUserCoords | async)?.latitude }},
+      {{ (getUserCoords | async)?.longitude }}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon name="close" slot="icon-only"></ion-icon>
+      </ion-button>
+      
+    <!--
+    <ion-fab-button color="primary"> button
+      <ion-icon name="square"></ion-icon> 
+    </ion-fab-button> -->
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <iframe src="./assets/aframe-ar.html"></iframe> <!-- -->
+
+
+</ion-content>
