@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Send email
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Send Email dans content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-message-content 
+    from = "de qui?"
+    to = "a qui?"
+    subject = "objet"
+    text = "contenu"
+  ></app-message-content>
+</ion-content>

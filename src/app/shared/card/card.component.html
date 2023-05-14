@@ -1,0 +1,19 @@
+ 
+ <ion-card *ngIf="msg.length==0">
+  <ion-card-header>
+    <ion-card-title>{{ contenu?.id }} </ion-card-title>
+    <ion-card-subtitle>{{ contenu.surname }}</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    <span>id: {{ contenu.id }}</span> 
+    <p>age: {{ contenu.age }}</p>
+    <p>city: {{ contenu.city }}</p>
+    <p>
+      <ion-button  class=gotoCard (click)="goToCard(contenu.id)" >Go to card</ion-button>
+    </p>
+  </ion-card-content>
+</ion-card><!-- -->
+<div  *ngIf="msg.length > 0">
+    {{ msg }}
+</div>

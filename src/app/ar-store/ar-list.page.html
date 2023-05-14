@@ -1,0 +1,19 @@
+
+
+<ion-fab #arlist horizontal="left" vertical="bottom" slot="fixed" [style]="{display:'flex'}">
+    <ion-fab-button color="primary"  (click)="openMarkerAR()"><!-- Floating action button -->
+        <ion-icon name="play"></ion-icon> 
+    </ion-fab-button>
+    <ion-fab-button color="warning"  (click)="openLocationBasedAR()"><!-- Floating action button -->
+        <ion-icon name="map"></ion-icon> 
+    </ion-fab-button>
+    <ion-fab-button color="primary"  (click)="openTextureAR()"><!-- Floating action button -->
+        <ion-icon name="scan"></ion-icon> 
+    </ion-fab-button>
+    <ion-fab-button color="secondary"  (click)="open3DObjectAR()" ><!-- Floating action button -->
+        <ion-icon name="scan"></ion-icon> 
+    </ion-fab-button>
+    <ion-fab-button color="danger"><!-- Floating action button -->
+        <ion-icon name="scan"></ion-icon> 
+    </ion-fab-button>
+</ion-fab>

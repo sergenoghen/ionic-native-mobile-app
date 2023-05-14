@@ -1,0 +1,33 @@
+
+
+ <!-- 
+    https://udn.realityripple.com/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame 
+    https://www.8thwall.com/playground/place-model/code/body.html#L5
+-->
+
+
+ <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Texture AR</ion-title>
+    <ion-title *ngIf="getUserCoords | async">
+      {{ (getUserCoords | async)?.latitude }},
+      {{ (getUserCoords | async)?.longitude }}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon name="close" slot="icon-only"></ion-icon>
+      </ion-button>
+      
+    <!--
+    <ion-fab-button color="primary"> button
+      <ion-icon name="square"></ion-icon> 
+    </ion-fab-button> -->
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content >
+  <iframe src="./assets/aframe-ar2.html"></iframe> <!--  -->
+  
+</ion-content>
