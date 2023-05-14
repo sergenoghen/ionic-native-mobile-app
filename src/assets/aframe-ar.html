@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <!-- include A-Frame -->
+  <!-- <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script> -->
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <!-- include ar.js for A-Frame -->
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+  <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js">  </script>
+  <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
+  <script>
+      THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
+  </script>
+  <body style="margin: 0px; overflow: hidden;">
+
+    <a-scene embedded arjs
+      vr-mode-ui="enabled: true"
+      embedded
+      arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+      <!-- <a-marker preset="hiro">
+        <a-image src="poster.jpg" rotation="-90 0 0" width="3" height="4"></a-image>
+      </a-marker> -->
+      <!-- <a-entity camera></a-entity> -->
+
+
+      <!--  <a-entity gps-projected-entity-place='latitude:45.310961 ; longitude:-73.742097'>
+        <a-image  class="collidable" id="image2" image2 scale="30 30 30"  src=" ./media/images/sport-attraction.jpg"  > </a-image>
+      </a-entity> -->
+      <!-- -->
+      <a-entity gps-projected-entity-place='latitude:45.314961 ; longitude:-74.742097'>
+        <a-image  class="collidable" id="image2" image2 scale="1 1 1"  src="/assets/moi2.jpg"  > </a-image> 
+      </a-entity>  
+        
+      <a-entity gps-projected-entity-place='latitude:44.306961 ; longitude:-73.742097'>
+        <a-image  class="collidable" id="image1" image1 scale="2 1 1"  src="/assets/moi.jpg"  > </a-image>
+      </a-entity> 
+      <a-box geometry="primitive: box"  color='red' scale='200 200 200' ></a-box>
+
+      <a-entity gps-projected-entity-place='latitude:44.306961 ; longitude:-73.742097'> 
+        <a-box style="display:block; min-height:200px;" material='color: green' scale='10 8 10'>
+          <!-- <a-animation  attribute="rotation" to="360 0 0" dur="5000" easing="linear" repeat="indefinite" ></a-animation> -->
+        </a-box>  
+      </a-entity> 
+      
+        
+
+    <a-entity>  
+      <a-cylinder  material='color: blue' scale='100 80 100'></a-cylinder> 
+    </a-entity> 
+        
+
+    <a-entity> 
+      <a-sphere material='color: fuchsia' scale='10 10 10'></a-sphere>
+    </a-entity> 
+        
+
+    <a-entity> 
+      <a-text material='color: fuchsia' scale='10 10 10'></a-text>
+    </a-entity> 
+        
+
+    <a-entity> 
+      <a-cylinder gps-projected-entity-place='latitude:45.310961 ; longitude:-73.742097' material='color: blue' scale='10 10 10'>
+      </a-cylinder>
+    </a-entity> 
+
+      <a-camera 
+          gps-camera="gpsMinDistance: 5; gpsMaxDistance: 150; simulateLatitude: 45.5646860505055; simulateLongitude: -73.61267814618893;" 
+          position="0 0 -1"
+          rotation-reader  
+          wasd-controls='acceleration: 1300'  
+          arjs-look-controls='smoothingFactor: 0.1'>
+          <a-cursor id="cursor" color="yellow"></a-cursor>
+      </a-camera>
+
+    </a-scene>
+  </body>
+</html>
