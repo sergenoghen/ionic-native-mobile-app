@@ -1,0 +1,8 @@
+{
+  "name": "ionic-native-mobile-app",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

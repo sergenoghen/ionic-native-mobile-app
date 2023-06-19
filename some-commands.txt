@@ -1,0 +1,61 @@
+
+ionic cordova platform add android
+npx cap copy android ou ionic capacitor copy android
+npx cap copy ios
+ionic integrations enable capacitor
+ionic capacitor open android
+ionic capacitor run android
+
+///////////
+
+ionic cordova platform add android
+
+ionic cordova emulate android
+
+
+
+
+ionic cordova emulate android will publish it on your emulator
+
+
+ionic integrations enable capacitor
+
+npx cap init [appName] [appId]
+
+after that add android or ios folder to your project by this command:
+npx cap add ios
+npx cap add android
+
+then finaly you can run your app by:
+
+npx cap open ios
+npx cap open android
+
+or this command:
+ionic capacitor run android 
+
+ionic cordova emulate android
+
+Running ionic native app in android studio:
+If you have not integrated capacitor to your project follow from step 1. If you have already integrated capacitor follow from step 2. Enter below command on your command prompt.
+
+Step 1
+ionic integrations enable capacitor
+
+Step 2
+npx cap init [appName] [appId]
+
+(appName is the name of your app, and appId is the domain identifier of your app (ex: com.example.app))
+
+Step 3
+ionic build - Build your application
+
+Step 4
+npx cap add ios - Copy to ios destination folder
+
+npx cap add android - Copy to android destination folder
+
+Step 5
+npx cap open ios
+
+npx cap open android
