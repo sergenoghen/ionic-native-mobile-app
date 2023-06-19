@@ -1,0 +1,11 @@
+https://docs.expo.dev/versions/latest/sdk/location/
+
+https://ionicframework.com/docs/angular/your-first-app
+
+https://ionicframework.com/docs/developing/android
+
+https://betterprogramming.pub/how-to-convert-your-angular-application-to-a-native-mobile-app-android-and-ios-c212b38976df
+
+ar app ionic : https://platform.ionic.io/multi-experience/ar
+
+ionic native app docs : https://ionicframework.com/docs/native/action-sheet
